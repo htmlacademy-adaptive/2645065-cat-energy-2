@@ -1,0 +1,172 @@
+.instructions {
+  min-height: 140px; /* на случай, если будет всего один элемент в списке */
+  padding-bottom: 49px;
+}
+
+.instructions__title {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: $basic-black;
+  margin: 0 0 40px 1px;
+  overflow-wrap: break-word;
+}
+
+.instructions__list {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+}
+
+.instructions__item {
+  position: relative;
+  font-size: 14px;
+  line-height: 18px;
+  color: $base-color-text;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 60px 60px;
+  padding-left: 80px;
+  padding-top: 2px;
+  min-height: 60px;
+  overflow-wrap: break-word;
+  max-width: $container-width-mobile;
+}
+
+.instructions__item--nutrients {
+  background-image: url("../../icons/stack.svg#nutrients-mobile");
+}
+
+.instructions__item--preparation {
+  background-image: url("../../icons/stack.svg#preparation-mobile");
+}
+
+.instructions__item--replacement {
+  background-image: url("../../icons/stack.svg#replacement-mobile");
+}
+
+.instructions__item--progress {
+  background-image: url("../../icons/stack.svg#progress-mobile");
+}
+
+@media (min-width: $tablet-width) {
+  $item-width: 250px;
+
+  .instructions {
+    min-height: 372px; /* на случай, если будет всего один элемент в списке */
+    border-bottom: 1px solid $special-light-grey7;
+    padding-bottom: 46px;
+  }
+
+  .instructions__title {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 32px;
+  }
+
+  .instructions__list {
+    display: grid;
+    grid-template-columns: $item-width $item-width;
+    gap: 37px 133px;
+    counter-reset: instructions__item;
+  }
+
+  .instructions__item {
+    font-size: 16px;
+    line-height: 24px;
+    background-position: left 40px;
+    padding-left: 0;
+    padding-top: 151px;
+    min-height: 280px;
+    max-width: $item-width;
+    background-size: 80px 80px;
+  }
+
+  .instructions__item::after {
+    position: absolute;
+    content: counter(instructions__item);
+    counter-increment: instructions__item;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    font-family: $secondary-font;
+    font-size: 280px;
+    line-height: 280px;
+    color: $basic-grey;
+    z-index: -1;
+    text-align: center;
+    height: 280px;
+  }
+
+  .instructions__item--nutrients {
+    background-image: url("../../icons/stack.svg#nutrients-tablet");
+  }
+
+  .instructions__item--preparation {
+    background-image: url("../../icons/stack.svg#preparation-tablet");
+  }
+
+  .instructions__item--replacement {
+    background-image: url("../../icons/stack.svg#replacement-tablet");
+  }
+
+  .instructions__item--progress {
+    background-image: url("../../icons/stack.svg#progress-tablet");
+  }
+
+  .instructions__item--nutrients::after {
+    right: calc($item-width - 227px); /* отнимаем от стандартной ширины блока ширину блока в макете */
+  }
+
+  .instructions__item--preparation::after {
+    right: calc($item-width - 246px);
+  }
+
+  .instructions__item--replacement::after {
+    right: calc($item-width - 247px);
+  }
+
+  .instructions__item--progress::after {
+    right: calc($item-width - 249px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  $item-width: 249px;
+
+  .instructions {
+    min-height: 372px;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .instructions__container {
+    margin-bottom: 69px;
+  }
+
+  .instructions__list {
+    grid-template-columns: repeat(4, $item-width);
+    gap: 37px 75px;
+  }
+
+  .instructions__item--nutrients {
+    background-image: url("../../icons/stack.svg#nutrients-desktop");
+  }
+
+  .instructions__item--preparation {
+    background-image: url("../../icons/stack.svg#preparation-desktop");
+  }
+
+  .instructions__item--replacement {
+    background-image: url("../../icons/stack.svg#replacement-desktop");
+  }
+
+  .instructions__item--progress {
+    background-image: url("../../icons/stack.svg#progress-desktop");
+  }
+
+  .instructions__title {
+    margin-left: 0;
+  }
+}

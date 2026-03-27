@@ -1,0 +1,267 @@
+.main-navigation {
+  display: flex;
+  flex-direction: column;
+  min-height: 65px;
+}
+
+.main-navigation--index {
+  color: $basic-black;
+}
+
+.main-navigation--catalog {
+  color: $basic-black;
+}
+
+.main-navigation__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.main-navigation__logo {
+  display: inline-block;
+}
+
+.main-navigation__logo:hover {
+  opacity: 0.8;
+}
+
+.main-navigation__logo:active {
+  opacity: 0.6;
+}
+
+.main-navigation__list {
+  position: static;
+  background-color: $basic-white;
+  display: block;
+}
+
+/* При включённом JS (класс .js на body) меню становится поверх главного окна */
+.js .main-navigation__list {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 66px;
+}
+
+.main-navigation__list--hidden { /* Модификатор, скрывающий главное меню */
+  display: none;
+}
+
+.main-navigation__item {
+  text-align: center;
+  padding: 22px 10px;
+  overflow-wrap: break-word;
+  position: relative;
+}
+
+.main-navigation__item::before,
+.main-navigation__item:last-child::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  background-color: $special-light-grey7;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  left: 0;
+}
+
+.main-navigation__item::before {
+  top: 0;
+}
+
+.main-navigation__item:last-child::after {
+  bottom: 0;
+}
+
+.main-navigation__link {
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration-line: none;
+  color: inherit;
+}
+
+.main-navigation__link:hover {
+  opacity: 0.6;
+}
+
+.main-navigation__link:focus {
+  opacity: 0.3;
+}
+
+.main-navigation__toggle,
+.main-navigation__toggle--closed {
+  width: 24px;
+  height: 20px;
+  border: none;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 20px;
+}
+
+.main-navigation__toggle {
+  background-image: url("../../icons/stack.svg#close");
+  transform: translate(4px, 9px);
+  display: none; /* По умолчанию (JS отключён) кнопка скрыта */
+}
+
+.main-navigation__toggle--closed { /* Модификатор, меняющий иконку на гамбургер */
+  background-image: url("../../icons/stack.svg#hamburger");
+  transform: translate(-1px, 8px);
+  display: block;
+}
+
+/* При включённом JS (класс .js на body) показываем кнопку */
+.js .main-navigation__toggle {
+  display: block;
+}
+
+.main-navigation__toggle:hover,
+.main-navigation__toggle:focus {
+  opacity: 0.7;
+}
+
+.main-navigation__toggle:active {
+  opacity: 0.5;
+}
+
+.main-navigation__toggle:disabled,
+.main-navigation__toggle:disabled:hover,
+.main-navigation__toggle:disabled:focus {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.2;
+}
+
+@media (min-width: $tablet-width) {
+  .main-navigation {
+    justify-content: space-between;
+    flex-direction: row;
+    min-height: 75px;
+  }
+
+  .main-navigation--index,
+  .main-navigation--catalog {
+    margin-bottom: 51px;
+  }
+
+  .main-navigation__wrapper {
+    align-items: center;
+    padding: 0;
+  }
+
+  .main-navigation__logo-image {
+    width: 174px;
+    height: 50px;
+  }
+
+  .main-navigation__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    max-width: 440px;
+    margin-right: 4px;
+    padding-top: 25px;
+    gap: 15px 34px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  .js .main-navigation__list {
+    position: static;
+  }
+
+  .main-navigation__toggle,
+  .js .main-navigation__toggle {
+    display: none;
+  }
+
+  .main-navigation__item {
+    text-align: left;
+    position: relative;
+    padding: 0;
+    max-width: 440px;
+  }
+
+  .main-navigation__item::before,
+  .main-navigation__item:last-child::after {
+    display: none;
+  }
+
+  .main-navigation__item--current-index::after {
+    content: "";
+    position: absolute;
+    background-color: $basic-green;
+    height: 2px;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+  }
+
+  .main-navigation__item--current-catalog::after {
+    content: "";
+    position: absolute;
+    background-color: $basic-green;
+    height: 2px;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+  }
+
+  .main-navigation__link {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-navigation {
+    width: 100%;
+    min-height: 114px;
+  }
+
+  .main-navigation--index {
+    color: $basic-white;
+    margin-bottom: 0;
+  }
+
+  .main-navigation--catalog {
+    margin-bottom: 74px;
+  }
+
+  .main-navigation__wrapper {
+    padding-top: 55px;
+  }
+
+  .main-navigation__logo-image {
+    width: 202px;
+    height: 59px;
+    display: block;
+  }
+
+  .main-navigation__link {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .main-navigation__list {
+    padding-top: 71px;
+    max-width: 480px;
+    margin-right: 1px;
+  }
+
+  .main-navigation__item {
+    max-width: 480px;
+  }
+
+  .main-navigation__item--current-index::after {
+    background-color: $basic-white;
+    bottom: -8px;
+  }
+}

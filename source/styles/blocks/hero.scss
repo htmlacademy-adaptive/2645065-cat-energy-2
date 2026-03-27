@@ -1,0 +1,175 @@
+.hero {
+  background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) calc(100% - 178px), $basic-white calc(100% - 178px), $basic-white 100%); /* 178px - высота белой области в блоке hero */
+  font-family: $secondary-font;
+  color: $basic-white;
+  min-height: 480px;
+  padding-top: 27px;
+  position: relative;
+}
+
+.hero--margin-bottom {
+  margin-bottom: 20px;
+}
+
+.hero::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: top center;
+  background-image: url("../../images/mobile/1x/hero-background-mobile@1x.jpg");
+  background-size: $mobile-width 302px;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.hero::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 178px);
+  background-image: linear-gradient(to right, #504f54 40%, #404044 60%, #424146 100%);
+  z-index: -2;
+}
+
+@media (min-resolution: 2dppx) {
+  .hero::before {
+    background-image: url("../../images/mobile/2x/hero-background-mobile@2x.jpg");
+  }
+}
+
+.hero__link {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px;
+}
+
+.hero__title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 25px;
+  margin-left: 2px;
+  overflow-wrap: break-word;
+}
+
+.hero__slogan {
+  font-size: 14px;
+  line-height: 14px;
+  text-align: left;
+  text-transform: uppercase;
+  margin: 0;
+  margin-left: 40px;
+  margin-bottom: 29px;
+  overflow-wrap: break-word;
+}
+
+.hero__image {
+  display: block;
+  margin-bottom: 3px;
+}
+
+@media (min-width: $tablet-width) {
+  .hero {
+    background-image: none;
+    font-family: $secondary-font;
+    color: $basic-black;
+    min-height: 810px;
+    position: static;
+    padding-top: 0;
+  }
+
+  .hero::before,
+  .hero::after {
+    display: none;
+  }
+
+  .hero--margin-bottom {
+    margin-bottom: 0;
+  }
+
+  .hero__image {
+    width: 709px;
+    height: 609px;
+    position: absolute;
+    z-index: -1;
+    top: 327px;
+  }
+
+  .hero__title {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    margin-left: 90px;
+    margin-bottom: 41px;
+    max-width: 420px;
+  }
+
+  .hero__slogan {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    margin-left: 90px;
+    margin-bottom: 49px;
+  }
+
+  .hero__link {
+    padding: 14px 24px;
+    font-size: 20px;
+    line-height: 26px;
+    width: 244px;
+    margin-left: 90px;
+    margin-bottom: 30px; /* на случай переполнения, чтобы кнопка не прижималась к самому низу */
+  }
+}
+
+@media (min-width: $desktop-width) {
+  $navidation-desktop-height: 114px;
+
+  .hero {
+    min-height: 580px; /* 694px минус минимальная высота хедера */
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 100%);
+    position: relative;
+  }
+
+  .hero::after {
+    display: block;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #3d3d41 50%, #3d3d41 100%);
+    z-index: -2;
+  }
+
+  .hero--margin-bottom {
+    margin-bottom: 82px;
+  }
+
+  .hero__image {
+    width: 552px;
+    height: 499px;
+    top: 29px;
+    left: calc(50% - 164px);
+    z-index: 10;
+  }
+
+  .hero__title {
+    margin-left: 79px;
+    padding-top: 110px;
+  }
+
+  .hero__slogan {
+    margin-left: 79px;
+    margin-bottom: 51px;
+    display: inline-block;
+    max-width: 420px;
+  }
+
+  .hero__link {
+    margin-left: 79px;
+  }
+}
