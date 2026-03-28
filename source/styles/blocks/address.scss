@@ -20,16 +20,16 @@
     max-width: 160px;
     font-size: 16px;
     text-align: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    gap: 20px;
+  }
+
+  .address__street {
+    margin-bottom: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .address {
-    gap: 19px;
+    margin-bottom: 19px;
     text-align: left;
   }
 }

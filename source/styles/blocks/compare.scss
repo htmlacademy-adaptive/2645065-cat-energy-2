@@ -107,7 +107,7 @@
 .compare__handle:disabled::before {
   border-color: $special-light-grey3;
   opacity: 0.8;
-  box-shadow: inset 0 0 0 20px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 0 20px rgba($basic-white, 0.8);
 }
 
 @media (min-width: $tablet-width) {

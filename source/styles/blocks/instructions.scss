@@ -13,12 +13,6 @@
   overflow-wrap: break-word;
 }
 
-.instructions__list {
-  display: flex;
-  flex-flow: column wrap;
-  gap: 20px;
-}
-
 .instructions__item {
   position: relative;
   font-size: 14px;
@@ -32,6 +26,11 @@
   min-height: 60px;
   overflow-wrap: break-word;
   max-width: $container-width-mobile;
+  margin-bottom: 20px;
+}
+
+.instructions__item:last-child {
+  margin-bottom: 0;
 }
 
 .instructions__item--nutrients {
@@ -66,21 +65,22 @@
   }
 
   .instructions__list {
-    display: grid;
-    grid-template-columns: $item-width $item-width;
+    display: flex;
+    flex-flow: row wrap;
     gap: 37px 133px;
     counter-reset: instructions__item;
   }
 
   .instructions__item {
+    max-width: $item-width;
     font-size: 16px;
     line-height: 24px;
     background-position: left 40px;
     padding-left: 0;
     padding-top: 151px;
     min-height: 280px;
-    max-width: $item-width;
     background-size: 80px 80px;
+    margin-bottom: 0;
   }
 
   .instructions__item::after {
@@ -146,8 +146,11 @@
   }
 
   .instructions__list {
-    grid-template-columns: repeat(4, $item-width);
-    gap: 37px 75px;
+    gap: 37px 74px;
+  }
+
+  .instructions__item {
+    max-width: $item-width;
   }
 
   .instructions__item--nutrients {
