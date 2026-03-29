@@ -1,9 +1,9 @@
 .product-card-more {
-  display: grid;
+  display: flex;
+  flex-flow: column;
   align-items: center;
-  padding: 25px 0 24px;
+  padding: 25px 0 23px;
   min-height: 207px;
-  align-content: start;
   position: relative;
 }
 
@@ -15,6 +15,7 @@
   background-color: $special-light-grey2;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
+  left: 0;
 }
 
 .product-card-more::before {
@@ -70,7 +71,7 @@
   font-size: 16px;
   line-height: 20px;
   overflow-wrap: break-word;
-  max-width: $container-width-mobile;
+  width: 100%;
 }
 
 @media (min-width: $tablet-width) {

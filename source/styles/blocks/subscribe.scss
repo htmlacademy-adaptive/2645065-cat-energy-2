@@ -14,9 +14,9 @@
   line-height: 24px;
   margin: 0;
   margin-bottom: 32px;
-  display: inline-block;
   position: relative;
   overflow-wrap: break-word;
+  width: fit-content;
   max-width: $container-width-mobile;
 }
 

@@ -5,11 +5,6 @@
   min-height: 659px;
 }
 
-.example__container {
-  display: flex;
-  flex-direction: column;
-}
-
 .example__title {
   font-family: $secondary-font;
   font-weight: 400;
@@ -40,19 +35,15 @@
   flex-flow: row wrap;
   justify-content: space-between;
   margin: 0;
-  align-items: start;
 }
 
 .example__group {
   width: 124px;
   min-height: 56px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-top: 15px;
   margin-bottom: 19px;
-  border-radius: 3px;
   position: relative;
+  justify-items: center;
 }
 
 .example__group::after {
@@ -61,8 +52,10 @@
   position: absolute;
   content: "";
   top: 0;
+  left: 0;
   bottom: 14px;
   border: 1px solid $special-light-grey3;
+  border-radius: 3px;
 }
 
 .example__term {
@@ -72,7 +65,6 @@
   text-align: center;
   color: $basic-black;
   margin-bottom: 9px;
-  max-width: 114px;
   position: relative;
   z-index: 1;
   overflow-wrap: break-word;
@@ -93,9 +85,9 @@
 }
 
 .example__costs {
-  display: inline-block;
-  max-width: $container-width-mobile;
-  text-align: center;
+  display: flex;
+  align-self: center;
+  gap: 2px;
 }
 
 .example__label {
@@ -104,9 +96,9 @@
   line-height: 20px;
   text-transform: uppercase;
   color: $basic-black;
-  margin-left: 2px;
   overflow-wrap: break-word;
   text-align: right;
+  max-width: 175px;
 }
 
 .example__value {
@@ -116,6 +108,7 @@
   text-transform: uppercase;
   color: $basic-black;
   overflow-wrap: break-word;
+  max-width: 80px;
 }
 
 @media (min-width: $tablet-width) {
@@ -150,7 +143,6 @@
     font-size: 30px;
     line-height: 37px;
     margin-bottom: 11px;
-    max-width: 152px;
   }
 
   .example__definition {
@@ -163,15 +155,26 @@
     margin-right: 2px;
   }
 
+  .example__costs {
+    flex-direction: column;
+    gap: 9px;
+    padding-top: 11px;
+    align-self: start;
+    align-items: end;
+  }
+
   .example__label {
     font-size: 20px;
     margin-right: 2px;
+    max-width: 250px;
   }
 
   .example__value {
     font-size: 20px;
     margin-top: 1px;
     margin-right: 1px;
+    max-width: 250px;
+    text-align: right;
   }
 
   .example__data {
@@ -183,16 +186,6 @@
   .example__stats {
     gap: 43px;
     max-width: 400px;
-  }
-
-  .example__costs {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    gap: 9px;
-    padding-top: 11px;
-    margin: 0;
-    justify-content: start;
   }
 }
 
@@ -236,27 +229,33 @@
 
   .example__compare {
     grid-area: compare;
-  }
-
-  .example__costs {
-    display: grid;
-    grid-template-columns: 173px 202px;
-    gap: 60px;
-    max-width: 435px;
-    padding-top: 0;
+    align-self: start;
   }
 
   .example__definition {
     background-color: $special-light-grey;
   }
 
+  .example__costs {
+    flex-direction: row;
+    gap: 60px;
+    max-width: 365px;
+    padding-top: 0;
+    align-items: start;
+  }
+
   .example__label {
     letter-spacing: 0.1px;
     margin: 0;
+    max-width: 173px;
+    flex-shrink: 0;
+    text-align: left;
   }
 
   .example__value {
     margin-left: 4px;
+    flex-shrink: 0;
+    max-width: 125px;
     text-align: left;
   }
 
