@@ -34,6 +34,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  align-items: start;
   margin: 0;
 }
 
@@ -68,6 +69,7 @@
   position: relative;
   z-index: 1;
   overflow-wrap: break-word;
+  max-width: 124px;
 }
 
 .example__definition {
@@ -143,6 +145,7 @@
     font-size: 30px;
     line-height: 37px;
     margin-bottom: 11px;
+    max-width: 162px;
   }
 
   .example__definition {

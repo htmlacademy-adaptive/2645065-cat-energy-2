@@ -25,6 +25,10 @@
   fill: $special-grey2;
 }
 
+.main-footer__social-list {
+  margin-bottom: 18px;
+}
+
 @media (min-width: $tablet-width) {
   .main-footer {
     min-height: 147px;
@@ -34,10 +38,16 @@
 
   .main-footer__container {
     flex-direction: row;
+    margin-top: -4px;
   }
 
   .main-footer__logo {
-    margin: 6px 160px 8px 1px;
+    margin: 9px 160px 8px 1px;
+  }
+
+  .main-footer__social-list {
+    margin-bottom: 0;
+    margin-right: auto;
   }
 }
 
@@ -46,6 +56,10 @@
     min-height: 169px;
     padding-top: 67px;
     padding-bottom: 65px;
+  }
+
+  .main-footer__container {
+    margin-top: 1px;
   }
 
   .main-footer__logo {

@@ -110,7 +110,7 @@
   padding: 4px 0;
   margin-left: 1px;
   overflow-wrap: break-word;
-  max-width: $container-width-mobile;
+  max-width: calc($container-width-mobile - $side-padding-mobile*2);
 }
 
 .programs__link::after {
@@ -168,7 +168,7 @@
   .programs__link {
     font-size: 20px;
     line-height: 30px;
-    max-width: $container-width-tablet - 20px; /* с запасом, иначе появляется полоса прокрутки */
+    max-width: calc($container-width-tablet - 104px); /* ширина контейнера минус паддинги по 52px */
   }
 
   .programs__link::after {

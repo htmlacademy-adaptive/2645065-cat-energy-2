@@ -7,7 +7,6 @@
   padding: 20px 0;
   width: 100%;
   justify-content: center;
-  margin-bottom: 18px;
 }
 
 .social-list__link {
@@ -56,9 +55,7 @@
 @media (min-width: $tablet-width) {
   .social-list {
     border: none;
-    margin-bottom: 0;
     padding: 0;
-    margin-right: auto;
     min-width: 132px;
     max-width: 184px;
     justify-content: start;
