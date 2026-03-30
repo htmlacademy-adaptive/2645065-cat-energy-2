@@ -148,11 +148,11 @@
   }
 
   .instructions__item {
-    width: 249px;
+    width: 250px;
   }
 
-  .instructions__item:nth-child(odd) {
-    width: 250px;
+  .instructions__item:nth-child(4n) {
+    width: 248px;
   }
 
   .instructions__item--nutrients {
