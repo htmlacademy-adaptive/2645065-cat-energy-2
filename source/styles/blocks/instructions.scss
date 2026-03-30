@@ -151,6 +151,10 @@
     width: 249px;
   }
 
+  .instructions__item:nth-child(odd) {
+    width: 250px;
+  }
+
   .instructions__item--nutrients {
     background-image: url("../../icons/stack.svg#nutrients-desktop");
   }
