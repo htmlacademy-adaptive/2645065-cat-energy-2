@@ -1,5 +1,5 @@
 .hero {
-  background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) calc(100% - 178px), $basic-white calc(100% - 178px), $basic-white 100%); /* 178px - высота белой области в блоке hero */
+  background-image: linear-gradient(to bottom, rgba($basic-green, 0.85) calc(100% - 178px), $basic-white calc(100% - 178px), $basic-white 100%); /* 178px - высота белой области в блоке hero */
   font-family: $secondary-font;
   color: $basic-white;
   min-height: 480px;
@@ -32,7 +32,7 @@
   left: 0;
   width: 100%;
   height: calc(100% - 178px);
-  background-image: linear-gradient(to right, #504f54 40%, #404044 60%, #424146 100%);
+  background-image: linear-gradient(to right, $special-dark-grey3 40%, $special-dark-grey4 60%, $special-dark-grey5 100%);
   z-index: -2;
 }
 
@@ -81,7 +81,6 @@
     font-family: $secondary-font;
     color: $basic-black;
     min-height: 810px;
-    position: static;
     padding-top: 0;
   }
 
@@ -99,7 +98,7 @@
     height: 609px;
     position: absolute;
     z-index: -1;
-    top: 327px;
+    top: 201px;
   }
 
   .hero__title {
@@ -134,14 +133,13 @@
 
   .hero {
     min-height: 580px; /* 694px минус минимальная высота хедера */
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 100%);
-    position: relative;
+    background-image: linear-gradient(to right, rgba($basic-white, 0) 50%, rgba($basic-green, 0.85) 50%, rgba($basic-green, 0.85) 100%);
   }
 
   .hero::after {
     display: block;
     height: 100%;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #3d3d41 50%, #3d3d41 100%);
+    background-image: linear-gradient(to right, rgba($basic-white, 0) 50%, $special-dark-grey6 50%, $special-dark-grey6 100%);
     z-index: -2;
   }
 
@@ -165,7 +163,6 @@
   .hero__slogan {
     margin-left: 79px;
     margin-bottom: 51px;
-    display: inline-block;
     max-width: 420px;
   }
 

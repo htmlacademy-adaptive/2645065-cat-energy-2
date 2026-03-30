@@ -12,7 +12,7 @@
 @media (min-width: $desktop-width) {
   .main-header--index {
     position: relative;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, rgba(104, 183, 56, 0.85) 50%, rgba(104, 183, 56, 0.85) 100%);
+    background-image: linear-gradient(to right, rgba($basic-white, 0) 50%, rgba($basic-green, 0.85) 50%, rgba($basic-green, 0.85) 100%);
   }
 
   .main-header--index::after {
@@ -22,7 +22,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #3d3d41 50%, #3d3d41 100%);
+    background-image: linear-gradient(to right, rgba($basic-white, 0) 50%, $special-dark-grey6 50%, $special-dark-grey6 100%);
     z-index: -2;
   }
 }

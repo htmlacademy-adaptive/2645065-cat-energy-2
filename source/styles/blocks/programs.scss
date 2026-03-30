@@ -3,20 +3,19 @@
 }
 
 .programs__container {
-  margin-bottom: 19px;
-}
-
-.programs__list {
-  display: flex;
-  flex-flow: column wrap;
-  gap: 20px;
+  margin-bottom: 20px;
 }
 
 .programs__item {
   background-color: $basic-grey;
   min-height: 266px;
-  padding: 30px 20px 18px;
+  padding: 31px 20px 18px;
   position: relative;
+  margin-bottom: 20px;
+}
+
+.programs__item:last-child {
+  margin-bottom: 0;
 }
 
 .programs__item--slim::before {
@@ -111,7 +110,7 @@
   padding: 4px 0;
   margin-left: 1px;
   overflow-wrap: break-word;
-  max-width: $container-width-mobile;
+  max-width: calc($container-width-mobile - $side-padding-mobile*2);
 }
 
 .programs__link::after {
@@ -153,7 +152,7 @@
     padding: 0;
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
     margin-left: 1px;
     max-width: 340px;
   }
@@ -169,7 +168,7 @@
   .programs__link {
     font-size: 20px;
     line-height: 30px;
-    max-width: $container-width-tablet - 20px; /* с запасом, иначе появляется полоса прокрутки */
+    max-width: calc($container-width-tablet - 104px); /* ширина контейнера минус паддинги по 52px */
   }
 
   .programs__link::after {
@@ -182,13 +181,14 @@
     display: none;
   }
 
-  .programs__list {
-    gap: 30px;
-  }
-
   .programs__item {
     min-height: 372px;
-    padding: 77px 52px 53px;
+    padding: 78px 52px 52px;
+    margin-bottom: 30px;
+  }
+
+  .program-item:last-child {
+    margin-bottom: 0;
   }
 
   .programs__item--slim::before {
@@ -239,7 +239,8 @@
   .programs__item {
     min-height: 374px;
     max-width: 570px;
-    padding: 77px 52px 55px;
+    padding: 78px 52px 54px;
+    margin-bottom: 0;
   }
 
   .programs__title {

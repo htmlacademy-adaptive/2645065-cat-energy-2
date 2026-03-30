@@ -51,9 +51,6 @@
   padding: 10px;
   overflow-wrap: break-word;
   max-width: $container-width-mobile;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
 
 @media (min-width: $tablet-width) {
@@ -100,6 +97,7 @@
     min-width: 894px;
     min-height: 72px;
     padding: 0;
+    align-items: start;
   }
 
   .addon-card__title {

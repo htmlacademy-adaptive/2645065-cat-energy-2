@@ -15,12 +15,8 @@
 .main-navigation__wrapper {
   display: flex;
   justify-content: space-between;
-  padding-top: 15px;
+  padding-top: 14px;
   padding-bottom: 10px;
-}
-
-.main-navigation__logo {
-  display: inline-block;
 }
 
 .main-navigation__logo:hover {
@@ -99,7 +95,7 @@
   height: 20px;
   border: none;
   padding: 0;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba($basic-white, 0);
   cursor: pointer;
   background-repeat: no-repeat;
   background-position: center;
@@ -170,7 +166,7 @@
     margin-right: 4px;
     padding-top: 25px;
     gap: 15px 34px;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba($basic-white, 0);
   }
 
   .js .main-navigation__list {
@@ -184,7 +180,6 @@
 
   .main-navigation__item {
     text-align: left;
-    position: relative;
     padding: 0;
     max-width: 440px;
   }

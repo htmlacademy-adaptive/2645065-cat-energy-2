@@ -15,10 +15,11 @@
   color: $basic-black;
   margin: 0;
   margin-left: calc($container-margin-mobile + $side-padding-mobile);
+  margin-top: 1px;
   margin-bottom: 35px;
-  display: inline-block;
   position: relative;
   overflow-wrap: break-word;
+  width: fit-content;
   max-width: $container-width-mobile;
 }
 
